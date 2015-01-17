@@ -3,8 +3,15 @@
 
 
 
-  <div ng-repeat="link in data.links">
-    {{link}}
+  <div class="link" ng-repeat="link in data.links">
+    <img src="../assets/redirect_icon.png">
+    <div class="visits">
+      <span class="count">{{link.visits}}</span>
+      Visits</div>
+    <div class="title">{{link.title}}</div>
+    <div class="original">{{link.url}}</div>
+    <a href="http://localhost:3000/code={{link.code}}" ng-click="addVisit($index)">http://localhost:3000/{{link.code}}</a>
+
   </div>
 
 

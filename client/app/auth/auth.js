@@ -27,4 +27,9 @@ angular.module('shortly.auth', [])
         console.error(error);
       });
   };
+
+  $scope.logout = function(){
+    console.log("Signed out!!!!!!!!!!!");
+    Auth.signout();
+  };
 });

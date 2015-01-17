@@ -23,6 +23,13 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
     })
+    .when('/logout',{
+      templateUrl: 'app/auth/signout.html',
+      controller: "AuthController"
+    });
+    // .when('/*',{
+    //   //templateUrl:
+    // }
     // Your code here
 
     // We add our $httpInterceptor into the array
