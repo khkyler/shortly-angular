@@ -11,12 +11,14 @@ var LinkSchema = new mongoose.Schema({
 });
 
 var createSha = function(url) {
+  console.log('HASHING!!!!!!!!!!!!!!!!!!!!!!!!!');
   var shasum = crypto.createHash('sha1');
   shasum.update(url);
   return shasum.digest('hex').slice(0, 5);
 };
 
 LinkSchema.pre('save', function(next){
+  console.logs('SAVING!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
   var code = createSha(this.url);
   this.code = code;
   next();
