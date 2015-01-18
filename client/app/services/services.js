@@ -2,7 +2,7 @@ angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
   var grabLinks = function(){
-    return $http.get('/api/links');
+    return $http.get('/api/links/');
 
   };
   var postLinks = function (data) {

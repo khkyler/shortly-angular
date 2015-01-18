@@ -15,6 +15,7 @@ module.exports = {
   },
 
   decode: function (req, res, next) {
+    console.log('decoding token', req.headers['x-access-token']);
     var token = req.headers['x-access-token'];
     var user;
 
